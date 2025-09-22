@@ -5,5 +5,10 @@ let pokemonList = [
 ];
 
 for (let i = 0; i < pokemonList.length; i++) {
-    document.write(`<h1>${pokemonList[i].name} (Height: ${pokemonList[i].height})</h1>`);
+    let message = "";
+    if(pokemonList[i].height > 10){
+        message = "- WOW! That's BIG!";
+    }
+
+    document.write(`<h1 style="display:inline;">${pokemonList[i].name} (Height: ${pokemonList[i].height})</h1> <span style="font-size:1em; font-weight:normal;">${message}</span><br>`);
 }
